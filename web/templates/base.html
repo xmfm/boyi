@@ -1,0 +1,24 @@
+<!doctype html>
+<title>{% block title %}{% endblock %}_博弈斋</title>
+<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+<nav>
+    <h1>博弈斋</h1>
+    <ul>
+        {% if g.user %}
+            <li><span>{{ g.user['username'] }}</span>
+            <li><a href="{{ url_for('mainbp.logout') }}">登出</a>
+        {% else %}
+            <li><a href="{{ url_for('mainbp.register') }}">注册</a>
+            <li><a href="{{ url_for('mainbp.login') }}">登入</a>
+        {% endif %}
+    </ul>
+</nav>
+<section class="content">
+    <header>
+        {% block header %}{% endblock %}
+    </header>
+    {% for message in get_flashed_messages() %}
+        <div class="flash">{{ message }}</div>
+    {% endfor %}
+    {% block content %}{% endblock %}
+</section>

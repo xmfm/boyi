@@ -1,0 +1,15 @@
+﻿<!doctype html>
+{% set titles = {'/go':'围棋', '/five':'五子棋', '/six':'六子棋', '/mj':'麻将'} %}
+{% set names = {'/go':'go', '/five':'go0', '/six':'go', '/mj':'mahjong'} %}
+<head>
+    <meta charset="utf-8">
+    <title>{{ titles[request.path] }}_博弈斋</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='game.css') }}">
+    <script src="{{ url_for('static', filename='jquery-3.4.0.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='socket.io.js') }}"></script>
+    <script src="{{ url_for('static', filename='laya.core.js') }}"></script>
+    <script src="{{ url_for('static', filename='laya.ui.js') }}"></script>
+</head>
+<body>
+	<script src="{{ url_for('static', filename=names[request.path] + '.js') }}"></script>
+</body>

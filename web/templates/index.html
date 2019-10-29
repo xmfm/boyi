@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+
+{% block header %}
+    <h1>{% block title %}主页{% endblock %}</h1>
+{% endblock %}
+{% block content %}
+    <div>
+        <a href="/go">围棋</a>
+    </div>
+    <div>
+        <a href="/five">五子棋</a>
+    </div>
+    <div>
+        <a href="/six">六子棋</a>
+    </div>
+    <div>
+        <a href="/mj">麻将</a>
+    </div>
+{% endblock %}
