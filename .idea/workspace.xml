@@ -13,26 +13,14 @@
     <favorites_list name="flaskt2" />
   </component>
   <component name="FileEditorManager">
-    <splitter split-orientation="horizontal" split-proportion="0.47171253">
+    <splitter split-orientation="horizontal" split-proportion="0.6696833">
       <split-first>
         <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
-          <file leaf-file-name="go_five.py" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/web/go_five.py">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="2370">
-                  <caret line="86" column="31" selection-start-line="86" selection-start-column="31" selection-end-line="86" selection-end-column="31" />
-                  <folding>
-                    <element signature="e#0#60#0" expanded="true" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
           <file leaf-file-name="__init__.py" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/web/__init__.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="1140">
-                  <caret line="47" column="33" selection-start-line="47" selection-start-column="33" selection-end-line="47" selection-end-column="33" />
+                <state relative-caret-position="570">
+                  <caret line="29" column="15" selection-start-line="29" selection-start-column="15" selection-end-line="29" selection-end-column="15" />
                   <folding>
                     <element signature="e#0#20#0" expanded="true" />
                   </folding>
@@ -43,17 +31,17 @@
           <file leaf-file-name="config.py" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/web/config.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="120">
-                  <caret line="4" column="32" selection-start-line="4" selection-start-column="32" selection-end-line="4" selection-end-column="32" />
+                <state relative-caret-position="330">
+                  <caret line="11" column="41" selection-start-line="11" selection-start-column="41" selection-end-line="11" selection-end-column="41" />
                 </state>
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="mj_jp.py" pinned="false" current-in-tab="false">
+          <file leaf-file-name="mj_jp.py" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/web/mj_jp.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="2520">
-                  <caret line="90" column="30" selection-start-line="90" selection-start-column="30" selection-end-line="90" selection-end-column="30" />
+                <state relative-caret-position="2070">
+                  <caret line="99" column="18" selection-start-line="99" selection-start-column="18" selection-end-line="99" selection-end-column="18" />
                   <folding>
                     <element signature="e#0#53#0" expanded="true" />
                   </folding>
@@ -61,46 +49,59 @@
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="game.py" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/mahjong/game.py">
+          <file leaf-file-name="local.py" pinned="false" current-in-tab="false">
+            <entry file="file://$USER_HOME$/AppData/Local/Programs/Python/Python37/Lib/site-packages/werkzeug/local.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="180">
-                  <caret line="8" column="25" selection-start-line="8" selection-start-column="25" selection-end-line="8" selection-end-column="25" />
+                <state relative-caret-position="10260">
+                  <caret line="347" selection-start-line="347" selection-end-line="347" />
                 </state>
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="table.py" pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/mahjong/table.py">
-              <provider selected="true" editor-type-id="text-editor" />
+          <file leaf-file-name="game.py" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/mahjong/game.py">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="1110">
+                  <caret line="39" column="18" selection-start-line="39" selection-start-column="18" selection-end-line="39" selection-end-column="18" />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="login.py" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/web/login.py">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="510">
+                  <caret line="35" lean-forward="true" selection-start-line="35" selection-end-line="35" />
+                  <folding>
+                    <element signature="e#0#16#0" expanded="true" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="tile.py" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/mahjong/tile.py">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="1380">
+                  <caret line="46" selection-start-line="46" selection-end-line="46" />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="hand_tiles.py" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/mahjong/hand_tiles.py">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="810">
+                  <caret line="27" selection-start-line="27" selection-end-line="27" />
+                </state>
+              </provider>
             </entry>
           </file>
           <file leaf-file-name="player.py" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/mahjong/player.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="210">
-                  <caret line="7" column="13" lean-forward="true" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="__init__.py" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/mahjong/__init__.py">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="60">
-                  <caret line="4" column="8" selection-start-line="4" selection-start-column="8" selection-end-line="4" selection-end-column="8" />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="mainbp.py" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/web/mainbp.py">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="2010">
-                  <caret line="74" selection-start-line="74" selection-end-line="74" />
-                  <folding>
-                    <element signature="e#0#16#0" expanded="true" />
-                  </folding>
+                <state relative-caret-position="810">
+                  <caret line="27" column="27" selection-start-line="27" selection-start-column="23" selection-end-line="27" selection-end-column="27" />
                 </state>
               </provider>
             </entry>
@@ -112,8 +113,8 @@
           <file leaf-file-name="go_five.py" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/web/go_five.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="2400">
-                  <caret line="80" column="36" lean-forward="true" selection-start-line="80" selection-start-column="36" selection-end-line="80" selection-end-column="36" />
+                <state relative-caret-position="130">
+                  <caret line="121" selection-start-line="121" selection-end-line="121" />
                   <folding>
                     <element signature="e#0#60#0" expanded="true" />
                   </folding>
@@ -129,15 +130,6 @@
                   <folding>
                     <element signature="e#0#13#0" expanded="true" />
                   </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="local.py" pinned="false" current-in-tab="false">
-            <entry file="file://$USER_HOME$/AppData/Local/Programs/Python/Python37/Lib/site-packages/werkzeug/local.py">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="10260">
-                  <caret line="347" selection-start-line="347" selection-end-line="347" />
                 </state>
               </provider>
             </entry>
@@ -163,12 +155,13 @@
       <find>robot</find>
     </findStrings>
   </component>
+  <component name="Git.Settings">
+    <option name="ROOT_SYNC" value="DONT_SYNC" />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/flaskr/templates/blog/index.html" />
-        <option value="$PROJECT_DIR$/flaskr/templates/blog/create.html" />
-        <option value="$PROJECT_DIR$/flaskr/templates/blog/update.html" />
         <option value="$PROJECT_DIR$/flaskr/lang.py" />
         <option value="$PROJECT_DIR$/flaskr/blog.py" />
         <option value="$PROJECT_DIR$/flaskr/auth.py" />
@@ -196,7 +189,6 @@
         <option value="$PROJECT_DIR$/flaskr/static/mahjong0.js" />
         <option value="$PROJECT_DIR$/flaskr/templates/game/game.html" />
         <option value="$PROJECT_DIR$/flaskr/go_five.py" />
-        <option value="$PROJECT_DIR$/mahjong/__init__.py" />
         <option value="$PROJECT_DIR$/game.py" />
         <option value="$PROJECT_DIR$/boyi/renlib.py" />
         <option value="$PROJECT_DIR$/mahjong/hand_tiles.py" />
@@ -207,24 +199,28 @@
         <option value="$PROJECT_DIR$/boyi/go_five.py" />
         <option value="$PROJECT_DIR$/boyi/game.py" />
         <option value="$PROJECT_DIR$/boyi/mahjong.py" />
-        <option value="$PROJECT_DIR$/web/config.py" />
         <option value="$PROJECT_DIR$/web/game.py" />
-        <option value="$PROJECT_DIR$/web/login.py" />
         <option value="$PROJECT_DIR$/web/static/game.html" />
         <option value="$PROJECT_DIR$/web/renlib.py" />
-        <option value="$PROJECT_DIR$/web/go_five.py" />
-        <option value="$PROJECT_DIR$/mahjong/game.py" />
         <option value="$PROJECT_DIR$/web/mahjong.py" />
-        <option value="$PROJECT_DIR$/web/__init__.py" />
+        <option value="$PROJECT_DIR$/mahjong/__init__.py" />
+        <option value="$PROJECT_DIR$/mahjong/game.py" />
+        <option value="$PROJECT_DIR$/web/go_five.py" />
+        <option value="$PROJECT_DIR$/mahjong/tile.py" />
+        <option value="$PROJECT_DIR$/mahjong/player.py" />
         <option value="$PROJECT_DIR$/web/mj_jp.py" />
+        <option value="$PROJECT_DIR$/web/config.py" />
+        <option value="$PROJECT_DIR$/.gitignore" />
+        <option value="$PROJECT_DIR$/web/login.py" />
+        <option value="$PROJECT_DIR$/web/__init__.py" />
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="7">
-    <option name="x" value="440" />
-    <option name="y" value="-25" />
-    <option name="width" value="1295" />
-    <option name="height" value="745" />
+  <component name="ProjectFrameBounds" extendedState="1">
+    <option name="x" value="12" />
+    <option name="y" value="181" />
+    <option name="width" value="1290" />
+    <option name="height" value="835" />
   </component>
   <component name="ProjectView">
     <navigator proportions="" version="1">
@@ -240,6 +236,28 @@
             </path>
             <path>
               <item name="boyi" type="b2602c69:ProjectViewProjectNode" />
+              <item name="boyi" type="462c0819:PsiDirectoryNode" />
+              <item name="mahjong" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="boyi" type="b2602c69:ProjectViewProjectNode" />
+              <item name="boyi" type="462c0819:PsiDirectoryNode" />
+              <item name="web" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="boyi" type="b2602c69:ProjectViewProjectNode" />
+              <item name="boyi" type="462c0819:PsiDirectoryNode" />
+              <item name="web" type="462c0819:PsiDirectoryNode" />
+              <item name="lib" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="boyi" type="b2602c69:ProjectViewProjectNode" />
+              <item name="boyi" type="462c0819:PsiDirectoryNode" />
+              <item name="web" type="462c0819:PsiDirectoryNode" />
+              <item name="static" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="boyi" type="b2602c69:ProjectViewProjectNode" />
               <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
             </path>
           </expand>
@@ -251,8 +269,8 @@
   </component>
   <component name="PropertiesComponent">
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../helloflask" />
-    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
+    <property name="last_opened_file_path" value="$USER_HOME$/PycharmProjects/mahjong" />
+    <property name="settings.editor.selected.configurable" value="vcs.Git" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
@@ -342,15 +360,16 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-7" y="-7" width="1550" height="838" extended-state="7" />
+    <frame x="10" y="145" width="1032" height="668" extended-state="1" />
+    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.8319088" visible="true" weight="0.13606341" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.7121771" visible="true" weight="0.18875502" />
       <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" weight="0.32755297" />
-      <window_info anchor="bottom" id="Version Control" order="9" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" weight="0.3266762" />
+      <window_info anchor="bottom" id="Version Control" order="9" />
       <window_info anchor="bottom" id="Python Console" order="7" weight="0.32755297" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.3945869" />
-      <window_info id="Structure" order="1" sideWeight="0.16809116" side_tool="true" visible="true" weight="0.13606341" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.4906015" />
+      <window_info id="Structure" order="1" sideWeight="0.28782287" side_tool="true" visible="true" weight="0.18875502" />
       <window_info anchor="bottom" id="Terminal" order="8" />
       <window_info id="Favorites" order="2" sideWeight="0.50073856" side_tool="true" weight="0.105367795" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
@@ -368,11 +387,10 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="3" />
+      <option name="time" value="4" />
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/flaskr/db_.py" />
     <entry file="file://$PROJECT_DIR$/flaskr/static/gobang.js" />
     <entry file="file://$PROJECT_DIR$/web/static/jcanvas.min.js" />
     <entry file="file://$PROJECT_DIR$/web/static/laya.core.js" />
@@ -437,13 +455,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/web/game.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="14" column="38" selection-start-line="14" selection-start-column="38" selection-end-line="14" selection-end-column="38" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$USER_HOME$/AppData/Local/Programs/Python/Python37/Lib/site-packages/socketio/server.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-494">
@@ -465,20 +476,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/web/login.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1440">
-          <caret line="56" selection-start-line="56" selection-end-line="56" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/config.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="4" column="32" selection-start-line="4" selection-start-column="32" selection-end-line="4" selection-end-column="32" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$USER_HOME$/AppData/Local/Programs/Python/Python37/Lib/random.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="133">
@@ -490,13 +487,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="133">
           <caret line="130" selection-start-line="130" selection-end-line="130" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/AppData/Local/Programs/Python/Python37/Lib/site-packages/werkzeug/local.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="10260">
-          <caret line="347" selection-start-line="347" selection-end-line="347" />
         </state>
       </provider>
     </entry>
@@ -524,10 +514,24 @@
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/web/static/mahjong.js" />
-    <entry file="file://$PROJECT_DIR$/web/static/go.js">
+    <entry file="file://$USER_HOME$/.PyCharmCE2018.1/system/python_stubs/-1541549754/builtins.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="5" selection-start-line="5" selection-end-line="5" />
+        <state relative-caret-position="224">
+          <caret line="733" column="41" lean-forward="true" selection-start-line="733" selection-start-column="25" selection-end-line="733" selection-end-column="41" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/mainbp.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2010">
+          <caret line="74" selection-start-line="74" selection-end-line="74" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mahjong/__init__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="4" lean-forward="true" selection-start-line="4" selection-end-line="4" />
         </state>
       </provider>
     </entry>
@@ -538,10 +542,31 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$USER_HOME$/.PyCharmCE2018.1/system/python_stubs/-1541549754/builtins.py">
+    <entry file="file://$PROJECT_DIR$/web/static/go.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="224">
-          <caret line="733" column="41" lean-forward="true" selection-start-line="733" selection-start-column="25" selection-end-line="733" selection-end-column="41" />
+        <state relative-caret-position="150">
+          <caret line="5" selection-start-line="5" selection-end-line="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/AppData/Local/Programs/Python/Python37/Lib/site-packages/socketio/namespace.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="5370">
+          <caret line="179" column="11" lean-forward="true" selection-start-line="179" selection-start-column="11" selection-end-line="179" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/AppData/Local/Programs/Python/Python37/Lib/site-packages/flask_socketio/namespace.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="3" column="21" lean-forward="true" selection-start-line="3" selection-start-column="16" selection-end-line="3" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/game.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1102">
+          <caret line="14" column="38" selection-start-line="14" selection-start-column="38" selection-end-line="14" selection-end-column="38" />
         </state>
       </provider>
     </entry>
@@ -555,98 +580,100 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$USER_HOME$/AppData/Local/Programs/Python/Python37/Lib/site-packages/socketio/namespace.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1050">
-          <caret line="35" lean-forward="true" selection-start-line="35" selection-end-line="35" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/AppData/Local/Programs/Python/Python37/Lib/site-packages/flask_socketio/namespace.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="7" lean-forward="true" selection-start-line="7" selection-end-line="7" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/web/go_five.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2400">
-          <caret line="80" column="36" lean-forward="true" selection-start-line="80" selection-start-column="36" selection-end-line="80" selection-end-column="36" />
+        <state relative-caret-position="130">
+          <caret line="121" selection-start-line="121" selection-end-line="121" />
           <folding>
             <element signature="e#0#60#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/mahjong/robot.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mahjong/table.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mahjong/player.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="810">
+          <caret line="27" column="27" selection-start-line="27" selection-start-column="23" selection-end-line="27" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mahjong/hand_tiles.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="810">
+          <caret line="27" selection-start-line="27" selection-end-line="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mahjong/tile.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1380">
+          <caret line="46" selection-start-line="46" selection-end-line="46" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/AppData/Local/Programs/Python/Python37/Lib/site-packages/werkzeug/local.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="10260">
+          <caret line="347" selection-start-line="347" selection-end-line="347" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mahjong/game.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1110">
+          <caret line="39" column="18" selection-start-line="39" selection-start-column="18" selection-end-line="39" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="355">
+          <caret line="109" selection-start-line="109" selection-end-line="109" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/config.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="330">
+          <caret line="11" column="41" selection-start-line="11" selection-start-column="41" selection-end-line="11" selection-end-column="41" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/web/__init__.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1140">
-          <caret line="47" column="33" selection-start-line="47" selection-start-column="33" selection-end-line="47" selection-end-column="33" />
+        <state relative-caret-position="570">
+          <caret line="29" column="15" selection-start-line="29" selection-start-column="15" selection-end-line="29" selection-end-column="15" />
           <folding>
             <element signature="e#0#20#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/web/mainbp.py">
+    <entry file="file://$PROJECT_DIR$/web/login.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2010">
-          <caret line="74" selection-start-line="74" selection-end-line="74" />
+        <state relative-caret-position="510">
+          <caret line="35" lean-forward="true" selection-start-line="35" selection-end-line="35" />
           <folding>
             <element signature="e#0#16#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/mahjong/__init__.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="4" column="8" selection-start-line="4" selection-start-column="8" selection-end-line="4" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/mahjong/player.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="7" column="13" lean-forward="true" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/web/mj_jp.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2520">
-          <caret line="90" column="30" selection-start-line="90" selection-start-column="30" selection-end-line="90" selection-end-column="30" />
+        <state relative-caret-position="2070">
+          <caret line="99" column="18" selection-start-line="99" selection-start-column="18" selection-end-line="99" selection-end-column="18" />
           <folding>
             <element signature="e#0#53#0" expanded="true" />
           </folding>
         </state>
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/mahjong/hand_tiles.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="218">
-          <caret line="243" selection-start-line="243" selection-end-line="243" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/mahjong/robot.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/mahjong/game.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="8" column="25" selection-start-line="8" selection-start-column="25" selection-end-line="8" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/mahjong/tile.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-2962" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/mahjong/table.py">
-      <provider selected="true" editor-type-id="text-editor" />
     </entry>
   </component>
 </project>

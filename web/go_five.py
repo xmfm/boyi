@@ -1,5 +1,5 @@
 from flask_socketio import emit, Namespace, rooms, join_room
-from flask import session, current_app as app, request
+from flask import session, request
 from flask_apscheduler import APScheduler
 
 import random
@@ -12,6 +12,7 @@ rooms_playing = set()
 players_playing = {}
 dani_waiting = set()
 compete_waiting = set()
+on_liners = {}
 
 grid = 15  # 路数
 
@@ -35,13 +36,15 @@ class Room:
         self.player1.color = WHITE
 
     def know(self, point):
-        self.turn = self.turn.oppo()
+        # self.turn = self.turn.oppo()
 
         self.notation.append(point)
         self.board[point[0]][point[1]] = len(self.notation) % 2 * 2 - 1
 
         self.player0.know(point)
         self.player1.know(point)
+
+        self.turn = self.turn.oppo()
 
     def clear(self):
         self.board = [[0]*grid for _ in range(grid)]
@@ -61,13 +64,13 @@ class Room:
                     p[1] += iy
             if n >= 5:  # 五子连珠
                 self.turn = None
-                return True
+                return color
         return False
 
 
 class Player:
     def __init__(self):
-        self.id = session['user_id']
+        self.id = session.user.id
         self.name = User.query.get(self.id).username
         self.room = None
         self.socket_id = request.sid
@@ -84,68 +87,94 @@ class Player:
         ...
 
 
+class DDict(dict):
+    def __init__(self, *args, **kwargs):
+        dict.__init__(self, *args, **kwargs)
+        self.__dict__ = self
+
+
 class FiveNamespace(Namespace):
     def on_player(self, msg):  # 收到玩家落子信息
+        if session.player != session.room.turn:
+            print('客户端错误')
+            print(session.player.name, session.room.turn.name)
+            return
         point = tuple(msg['move'])
-        app.room.know(point)
-        emit('oppo', {'move': list(point)}, room=app.room.id, include_self=False)
-        if not app.room.is_win():
-            if getattr(app, 'robot', False):
-                emit('oppo', {'move': list(app.robot.move())})
-                if app.room.is_win():
-                    emit('finish', {'winer': app.room.board[point[0]][point[1]]}, room=app.room.id)
+        session.room.know(point)
+        winner = session.room.is_win()
+        if session.player.oppo().name != 'Robot':
+            if not winner:
+                emit('oppo', {'move': list(point)}, room=session.room.id, include_self=False)
+            else:
+                emit('oppo', {'move': list(point), 'finish': {'winner': winner}},
+                     room=session.room.id, include_self=False)
+                emit('finish', {'winner': winner})
         else:
-            emit('finish', {'winer': app.room.board[point[0]][point[1]]}, room=app.room.id)
+            if not winner:
+                p = list(session.player.oppo().move())
+                winner = session.room.is_win()
+                if not winner:
+                    emit('oppo', {'move': p}, room=session.room.id)
+                else:
+                    emit('oppo', {'move': p, 'finish': {'winner': winner}})
+            else:
+                emit('finish', {'winner': winner})
 
     def on_ready_ok(self, msg):  # 收到玩家开始游戏的信息
-        app.room = app.player.room
-        join_room(app.room.id)
-        app.player.on_line = True
-        if getattr(app, 'robot', False):
-            if app.robot.color == BLACK:
-                emit('oppo', {'move': list(app.robot.move())})
+        session.room = session.player.room
+        join_room(session.room.id)
+        session.player.on_line = True
+        if session.player.on_line and session.player.oppo().on_line:
+            session.room.turn = session.room.player0
+        if session.room.player0.name == 'Robot':
+            emit('oppo', {'move': list(session.room.player0.move())})
         else:
-            emit('ready_ok', {'player': 'oppo'}, room=app.room.id, include_self=False)
-        if app.player.on_line and app.player.oppo().on_line:
-            app.room.turn = app.room.player0
+            emit('ready_ok', {'player': 'oppo'}, room=session.room.id, include_self=False)
 
     def on_connect(self):  # 建立连接
-        if session['user_id'] not in players_playing:  # 玩家未在对局
-            app.player = Player()
+        if session.user.id not in players_playing:  # 玩家未在对局
+            session.player = Player()
+            on_liners[session.user.id] = session.player
         else:  # 玩家在对局中，即玩家为掉线重连，则发送当前局谱
-            app.player = players_playing[session['user_id']]
-            if app.player.room:
-                app.room = app.player.room
-                # app.robot = app.room.player1
-                emit('history', {'moves': [list(n) for n in app.room.notation]})
-        # app.player.socket_id = rooms()[0]
-        print('\'', app.user.username, '\' connected')
+            session.player = players_playing[session.user.id]
+            if session.player.room:
+                session.room = session.player.room
+                emit('history', {'moves': [list(n) for n in session.room.notation]})
+        # session.player.socket_id = rooms()[0]
+        print('\'', session.player.name, '\' connected')
 
     def on_ready(self, msg):
         if msg['type'] == 'dani':
-            dani_waiting.add(app.player)
+            dani_waiting.add(session.player)
         elif msg['type'] == 'compete':
-            compete_waiting.add(app.player)
+            compete_waiting.add(session.player)
         elif msg['type'] == 'robot':
-            app.robot = FiveRobot()
-            # app.room = Room(random.sample((app.player, app.robot), 2))
-            # app.room = Room((app.player, app.robot))
-            app.room = Room((app.robot, app.player))
-            app.room.id = random.sample(rooms_free, 1)[0]
-            rooms_free.remove(app.room.id)
-            emit('start', {'oppo': app.robot.name, 'color': app.player.color})
+            robot = FiveRobot()
+            # app.room = Room(random.sample((session.player, robot), 2))
+            # app.room = Room((session.player, robot))
+            session.room = Room((robot, session.player))
+            session.room.id = random.sample(rooms_free, 1)[0]
+            rooms_free.remove(session.room.id)
+            emit('start', {'oppo': robot.name, 'color': session.player.color})
 
     def on_disready(self):
         ...
 
     def on_disconnect(self):
-        if session['user_id'] in players_playing:
-            players_playing.pop(session['user_id'])
-            app.player = app.room = app.robot = None
-        print('\'', app.user.username, '\' disconnected\'')
+        if session.user.id in on_liners:
+            session.player = on_liners[session.user.id]
+            session.room = session.player.room
+        else:
+            session.player = None
+            session.room = None
+
+        if session.user.id in players_playing:
+            players_playing.pop(session.user.id)
+            session.player = session.room = None
+        print('\'', session.player.name, '\' disconnected\'')
 
     def on_five_in(self, msg):
-        ...
+        self.get_player()
 
     def five_start(self):
         while True:
@@ -168,3 +197,4 @@ class FiveNamespace(Namespace):
                     self.socketio.emit('start', {'oppo': player0.name, 'color': player1.color},
                                        room=player1.socket_id, namespace=self.namespace)
             self.socketio.sleep(3)
+

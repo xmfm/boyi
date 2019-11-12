@@ -1,9 +1,5 @@
-﻿var prefix = '<script src=\"/static/';
-var suffix = '.js\"></script>';
-$('body').append(prefix+'tools'+suffix, prefix+'login'+suffix, prefix+'index'+suffix,
-                 prefix+'gameIndex'+suffix, prefix+'go'+suffix, prefix+'mj'+suffix,);
 $(function(){
-	Laya.init(stageWidth, stageHeight);
+	Laya.init(1920, 1080, Laya.WebGL);
 	Laya.stage.bgColor = '#999';
 	Laya.stage.alignH = 'center';
 	Laya.stage.alignV = 'center';
@@ -11,6 +7,11 @@ $(function(){
 	Laya.stage.scaleMode = 'showall';
 	Laya.stage.screenMode = "horizontal";
 	Laya.Stat.show(0, 0);
+	
+	var prefix = '<script src=\"/static/';
+	var suffix = '.js\"></script>';
+	$('body').append(prefix+'tools'+suffix, prefix+'login'+suffix, prefix+'index'+suffix,
+                     prefix+'gameIndex'+suffix, prefix+'go'+suffix, prefix+'mj'+suffix,);
 
 	var socket = io();
 	socket.on('connect', () => { console.log('已连接'); });
@@ -28,7 +29,10 @@ $(function(){
 		if (msg['login'] == 'ok') {
 			login.sp.visible = false;
 			index = new Index();
-			$.post('/', { user_id: msg['user_id'] }, function (data, status) { console.log(data['ok']); })
+			$.post('/', { user_id: msg['user_id'] }, function (data) {
+				//if(data['login']=='ok')
+				//$.post('/', {a:'0'});
+			});
 		} else {
 			console.log('登录失败');
 		}

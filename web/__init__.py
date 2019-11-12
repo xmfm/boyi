@@ -3,6 +3,7 @@ from flask import Flask, session, request, jsonify, current_app
 from flask_socketio import SocketIO
 import flask_sqlalchemy as sqla
 from flask_apscheduler import APScheduler
+from flask_mail import Mail
 
 from web import mainbp
 from web.config import configs
@@ -26,6 +27,9 @@ def app_run(**kwargs):
     db.init_app(app)
     # db.create_all()
     socketio = SocketIO(app)
+    mail = None
+    # mail = Mail(app)
+
 
     # app.register_blueprint(mainbp.bp)
 
@@ -40,13 +44,19 @@ def app_run(**kwargs):
 
     @app.route('/', methods=['post'])
     def reset_session():
+        print(session.get('user_id'))
         if request.form.get('user_id'):
+            session.clear()
             session['user_id'] = request.form.get('user_id')
-            return jsonify({'ok': 'ok'})
+            return jsonify({'login': 'ok'})
+        else:
+            session.clear()
+            return jsonify({'logout': 'ok'})
 
     five = go_five.FiveNamespace('/five')
     mj = mj_jp.MJNamespace('/mj')
-    socketio.on_namespace(login.LoginNamespace('/'))
+    log_in = login.LoginNamespace('/', mail=mail)
+    socketio.on_namespace(log_in)
     socketio.on_namespace(five)
     socketio.on_namespace(mj)
 

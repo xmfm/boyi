@@ -7,7 +7,7 @@
         this.sp.name = 'index';
         stage.addChild(this.sp);
 
-        tessellate(this.polys, stageWidth, stageHeight, 200, "#aaa");
+        tessellate(this.polys, stage.width, stage.height, 200, "#aaa");
         var width = 200, height = width * sqrt(3) / 2;
         var mjButton = getHexagonButton(width, ["#abc", "#bca", "#cab"], () => {
             this.mjIndex = new GameIndex('mj');

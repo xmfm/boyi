@@ -10,7 +10,7 @@
         stage.addChild(this.sp);
         this.sp.zOrder = -1;
 
-        tessellate(polys, stageWidth, stageHeight, 200, "#999");
+        tessellate(polys, stage.width, stage.height, 200, "#999");
 
         var width = 200, height = width * sqrt(3) / 2;
         var button1 = getHexagonButton(width, ["#abc", "#bca", "#cab"], () => { this.ready('dani'); }, "段位", 'dani');
@@ -30,10 +30,12 @@
         this.socket = io('/' + name);
         this.socket.on('start', (msg)=>{
             if (this.name == 'mj') {
-                this.game = new MJ(this.socket, this.name);
-                transPolys(this.sp.name, this.name, ()=>{this.game.player0.start();});
-				//this.socket.emit('ready_ok', { ok: 'ok' });
-            } else {
+                this.game = new MJ(this.socket, this.name, msg);
+                transPolys(this.sp.name, this.name, ()=>{
+					//this.game.players[0].start();
+					//this.socket.emit('ready_ok', { ok: 'ok' });
+				});
+			} else {
                 this.game = new Go(this.socket, this.name);
                 transPolys(this.sp.name, this.name);
                 //this.socket.emit('ready_ok', { ok: 'ok' });

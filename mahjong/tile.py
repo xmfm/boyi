@@ -25,6 +25,10 @@ class Tile:
         return (self.__kind % 9 + 1) if self.__kind // 9 < 3 else 0
 
     @property
+    def int_have_red(self):
+        return (self.__kind // 9 + 1) * 10 + (self.__kind % 9 + 1) * (not self.__red)
+
+    @property
     def red(self):
         return self.__red
 
@@ -98,7 +102,7 @@ class Tile:
 
     def is_honor(self):
         """
-        是否为自牌
+        是否为字牌
         :return: boolean
         """
         return self.nmbr == 0

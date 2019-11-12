@@ -1,8 +1,12 @@
-﻿class Go {
+class Go {
     constructor(socket, name, grid) {
         this.sp = new Sprite();
         this.boardSp = new Sprite();
-        this.stoneSp = new Sprite();
+        //this.stoneSp = new Sprite();
+		
+		this.boardSp.size(stage.width, stage.width);
+        //this.stoneSp.size(stage.width, stage.width);
+		this.boardSp.x = (stage.width - stage.height)/2;
 
         this.socket = socket;
 
@@ -15,7 +19,7 @@
             this.grid = 19;
         }
 
-        this.boardTop = stageHeight / 20; this.boardLeft = this.boardTop; this.boardBottom = stageHeight - this.boardTop; this.boardRight = stageHeight - this.boardLeft; this.gridStep = (this.boardRight - this.boardLeft) / (this.grid - 1); this.stoneR = this.gridStep * 3 / 7;//棋盘四周，棋盘线距离，棋子半径
+        this.boardTop = stage.height / 20; this.boardLeft = this.boardTop; this.boardBottom = stage.height - this.boardTop; this.boardRight = stage.height - this.boardLeft; this.gridStep = (this.boardRight - this.boardLeft) / (this.grid - 1); this.stoneR = this.gridStep * 3 / 7;//棋盘四周，棋盘线距离，棋子半径
         //buttonWidth, buttonHeight;
         this.notation = new Array();//棋谱
         this.board = new Array(this.grid).fill().map(x=>Array(this.grid).fill(0));//棋盘
@@ -32,6 +36,9 @@
                 console.log('服务器错误！');
             }
             this.myTurn = true;
+			if(msg['finish']){
+				this.finish(msg['finish']);
+			}
         });
         this.socket.on('history', function (msg) {
             for (i of msg['moves']) {
@@ -43,16 +50,11 @@
             transPolys(name.substr(0, name.length-5), name);
         });
         this.socket.on('finish', function (msg) {
-            if (msg['winer'] == 1) {
-                console.log('黑棋胜');
-            } else {
-                console.log('白棋胜');
-            }
-            this.myTurn = false;
+			this.finish(msg);
         });
 
         this.sp.addChild(this.boardSp);
-        this.sp.addChild(this.stoneSp);
+        //this.sp.addChild(this.stoneSp);
         this.drawBoard();
         //this.sp.addChild(newButton(1130, 540, 200, 50, '重新开始', this.reStart));
         //this.sp.addChild(newButton(1350, 540, 200, 50, '悔棋', this.reStart));
@@ -60,9 +62,6 @@
         //this.boardSp.on('click', this.boardSp, this.move);
         //this.sp.on('click', this.sp, ()=>{console.log('click');});
         this.boardSp.on('click', this, this.move);
-
-        this.boardSp.size(stageWidth, stageHeight);
-        this.stoneSp.size(stageWidth, stageWidth);
 
         this.sp.visible = false;
         this.sp.zOrder = -3;
@@ -101,7 +100,7 @@
     }
     drawStone(x, y, color) {
         //画棋子
-        this.stoneSp.graphics.drawCircle(this.boardLeft + x * this.gridStep, this.boardTop + y * this.gridStep, this.stoneR, ['#ffffff', '#000000'][Number(color)]);
+        this.boardSp.graphics.drawCircle(this.boardLeft + x * this.gridStep, this.boardTop + y * this.gridStep, this.stoneR, ['#ffffff', '#000000'][Number(color)]);
     }
     addStone(x, y) {//落子
         if (x >= 0 && x < this.grid && y >= 0 && y < this.grid && this.board[x][y] == 0) {
@@ -148,9 +147,17 @@
         this.socket.emit('start', { data: 'reStart' });
     }
     boardInit() {
-        this.stoneSp.graphics.clear();
+        this.boardSp.graphics.clear();
         var myTurn = false;
         this.notation = new Array();//棋谱
 		this.board = new Array(this.grid).fill().map(x=>Array(this.grid).fill(0));
     }
+	finish(msg){
+		if (msg['winer'] == 1) {
+			console.log('黑棋胜');
+		} else {
+			console.log('白棋胜');
+		}
+		this.myTurn = false;
+	}
 }

@@ -15,6 +15,7 @@ class Game:
 
         self.dora_point = []  # 宝牌指示牌
         self.dora_point_ura = []  # 里宝牌指示牌
+        self.to_dora_point()
 
         self.locat_player = 0  # locat player of number
         self.locat = 0  # locat tile of number in wall
@@ -66,6 +67,9 @@ class Game:
             return 27
         else:
             return tile_int + 1
+
+    def to_dora_point(self):
+        self.dora_point.append(self.wall[-(6+len(self.dora_point)*2)])
 
 
 if __name__ == '__main__':

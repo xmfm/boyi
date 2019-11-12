@@ -6,8 +6,8 @@ GANG = 3
 
 
 class Player:
-
     def __init__(self):
+        self.level = 0
         self.point = 25000
         self.wind = 0
         self.handTiles = HandTiles()

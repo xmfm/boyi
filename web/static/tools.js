@@ -1,4 +1,4 @@
-﻿var stageWidth = 1920, stageHeight = 1080;//牌桌大小
+﻿//var stageWidth = 1920, stageHeight = 1080;//牌桌大小
 
 var stage = Laya.stage;
 var Sprite = Laya.Sprite;
@@ -8,6 +8,16 @@ var Handler = Laya.Handler;
 var sqrt = Math.sqrt;
 var ceil = Math.ceil;
 var floor = Math.floor;
+
+function arrayRemove(arr, val){
+	for(var i in arr){
+		if(arr[i]==val){
+			arr.splice(i, 1);
+			return true;
+		}
+	}
+	return false;
+}
 
 function getPoly(points, width, height, color) {
     var newPoly = new Sprite();
@@ -127,7 +137,7 @@ function transSlip(fromSpName, toSpName, callBack=()=>{}) {
     var toSp = stage.getChildByName(toSpName)
     toSp.visible = true;
     var polys = toSp.getChildByName('polys');
-    toSp.x = stageWidth;
+    toSp.x = stage.width;
 	var callBack0 = new Handler(this, ()=>{fromSp.visible=false;toSp.visible=true;callBack();});
     for (var i = 0; i < polys.numChildren; i++) {
         (polys.getChildAt(i)).scale(1, 1);
